@@ -30,7 +30,7 @@ public class ControlButtons : MonoBehaviour
 
     IEnumerator changeLeft()
     { 
-        while(car.transform.position.x >= -0.91f)
+        while(car.transform.position.x > -0.91f)
         {
             car.transform.Translate(Vector2.left * speed * Time.deltaTime);
             yield return null;
@@ -39,7 +39,7 @@ public class ControlButtons : MonoBehaviour
 
     IEnumerator changeRight()
     {
-        while (car.transform.position.x <= 0.91f)
+        while (car.transform.position.x < 0.91f)
         {
             car.transform.Translate(Vector2.right * speed * Time.deltaTime);
             yield return null;
