@@ -8,14 +8,11 @@ public class Car : MonoBehaviour
     }
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "LSL")
-            transform.position = new Vector2(-0.91f, transform.position.y);
-        if (collision.collider.tag == "LSR")
+        if(transform.position.x <= -0.91f)
+            transform.position = new Vector2(-0.91f,transform.position.y);
+        if (transform.position.x >= 0.91f)
             transform.position = new Vector2(0.91f, transform.position.y);
     }
+
+
 }
